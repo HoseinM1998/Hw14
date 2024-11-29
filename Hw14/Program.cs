@@ -35,10 +35,17 @@ while (true)
                 var currentCard = cardService.GetCurrentCard();
                 if (currentCard == null)
                 {
-                    ColoredConsole.WriteLine("User Not Found".DarkRed());
+                    ColoredConsole.WriteLine("User Not Found||Invalid Password".DarkRed());
                     Console.ReadKey();
                     break;
                 }
+                if(currentCard.Password != password)
+                {
+                    ColoredConsole.WriteLine("User Not Found||Invalid Password".DarkRed());
+                    Console.ReadKey();
+                    break;
+                }
+               
                 loggedIn = true;
                 ColoredConsole.WriteLine("Login Successful".DarkGreen());
                 Console.ReadKey();

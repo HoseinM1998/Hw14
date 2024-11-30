@@ -13,6 +13,8 @@ namespace Hw14.Entities
         public float Balance { get; set; }
         public bool IsActive { get; set; }
         public string Password { get; set; }
+        //public int WrongPasswordTries { get; set; } = 0;
+
         public List<Transactiion> Transactions { get; set; } = new List<Transactiion>();
     }
 }

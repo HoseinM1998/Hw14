@@ -11,6 +11,8 @@ namespace Hw14.Contracts
     {
         public Card GetCard(string cardNumber);
         public void UpdateCard(Card card);
+        public float GetCardBalance(string cardNumber);
+
 
 
     }

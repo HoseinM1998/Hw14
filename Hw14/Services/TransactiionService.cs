@@ -15,10 +15,10 @@ namespace Hw14.Services
     {
         private readonly CardRepository _cardRepository;
         private readonly TransactionRepository _transactionRepository;
-        public TransactionService(TransactionRepository transactionRepository, CardRepository cardRepository)
+        public TransactionService()
         {
-            _transactionRepository = transactionRepository;
-            _cardRepository = cardRepository;
+            _transactionRepository = new TransactionRepository();
+            _cardRepository = new CardRepository();
         }
         public bool TransferFunds(string sourceCardNumber, string destinationCardNumber, float amount)
         {

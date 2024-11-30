@@ -11,24 +11,29 @@ namespace Hw14.Services
 {
     public class CardService : ICardService
     {
-        private readonly CardRepository _cardRepository;
+        private readonly ICardRepository _cardRepository;
         private Card _currentCard;
         private int _failedCount = 0;
-        public CardService(CardRepository cardRepository)
+        public CardService()
         {
-            _cardRepository = cardRepository;
+            _cardRepository = new CardRepository();
         }
 
         public bool Login(string cardNumber, string password)
         {
             if (cardNumber.Length != 16)
             {
-                return false; 
+                return false;
             }
 
             var card = _cardRepository.GetCard(cardNumber);
 
-            if (card == null || !card.IsActive)
+            if (card == null)
+            {
+                return false;
+            }
+
+            if (!card.IsActive)
             {
                 return false; 
             }
@@ -36,23 +41,27 @@ namespace Hw14.Services
             if (card.Password == password)
             {
                 _currentCard = card;
-                _failedCount = 0; 
+                _failedCount = 0;
                 return true;
             }
             else
             {
                 _failedCount++;
 
-                if (_failedCount >= 3)
+                if (_failedCount == 3)
                 {
-                    card.IsActive = false;
-                    _cardRepository.UpdateCard(card); 
+                    card.IsActive = false; 
+                    _cardRepository.UpdateCard(card);
                 }
 
-                return false; 
+                return false;
             }
         }
 
+        public Card GetCard(string cardNumber)
+        {
+            return _cardRepository.GetCard(cardNumber); 
+        }
 
         public void Logout()
         {
@@ -65,19 +74,16 @@ namespace Hw14.Services
         }
         public float GetCardBalance(string cardNumber)
         {
-            var card = _cardRepository.GetCard(cardNumber);
+           
 
-            if (card == null)
+            var balance = _cardRepository.GetCardBalance(cardNumber);
+
+            if (balance == 0)
             {
-                throw new InvalidOperationException("Card not found.");
+                throw new Exception("Balance is Zero");
             }
 
-            if (!card.IsActive)
-            {
-                throw new InvalidOperationException("Card is inactive.");
-            }
-
-            return card.Balance;
+            return balance;
         }
 
         public bool UpdateCardBalance(string cardNumber, float amount)

@@ -15,9 +15,9 @@ namespace Hw14.Repositories
     {
         private readonly BankDbContext _context;
 
-        public TransactionRepository(BankDbContext context)
+        public TransactionRepository()
         {
-            _context = context;
+            _context = new BankDbContext();
         }
 
         public void AddTransaction(Transactiion transaction)

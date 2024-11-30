@@ -14,15 +14,22 @@ namespace Hw14.Repositories
     {
         private readonly BankDbContext _context;
 
-        public CardRepository(BankDbContext context)
+        public CardRepository()
         {
-            _context = context;
+            _context = new BankDbContext();
         }
 
         public Card GetCard(string cardNumber)
         {
             return _context.Cards
                 .FirstOrDefault(c => c.CardNumber == cardNumber);
+        }
+        public float GetCardBalance(string cardNumber)
+        {
+            return _context.Cards
+                .Where(c => c.CardNumber == cardNumber)
+                .Select(c => c.Balance)
+                .FirstOrDefault();
         }
 
         public void UpdateCard(Card card)

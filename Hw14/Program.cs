@@ -8,8 +8,8 @@ using Hw14.Repositories;
 using Hw14.Services;
 using static Hw14.Repositories.TransactionRepository;
 
-ICardService cardService = new CardService(new CardRepository(new BankDbContext()));
-ITransactiionService transactionService = new TransactionService(new TransactionRepository(new BankDbContext()), new CardRepository(new BankDbContext()));
+ICardService cardService = new CardService();
+ITransactiionService transactionService = new TransactionService();
 bool loggedIn = false;
 
 while (true)
@@ -31,21 +31,31 @@ while (true)
 
             try
             {
-                cardService.Login(cardNumber, password);
-                var currentCard = cardService.GetCurrentCard();
-                if (currentCard == null)
+                var card = cardService.GetCard(cardNumber);
+
+                if (card == null)
                 {
-                    ColoredConsole.WriteLine("User Not Found||Invalid Password".DarkRed());
+                    ColoredConsole.WriteLine("User Not Found".DarkRed());
                     Console.ReadKey();
                     break;
                 }
-                if(currentCard.Password != password)
+
+                if (!card.IsActive)
                 {
-                    ColoredConsole.WriteLine("User Not Found||Invalid Password".DarkRed());
+                    ColoredConsole.WriteLine("User Blocked".DarkRed());
                     Console.ReadKey();
                     break;
                 }
-               
+
+                bool loginResult = cardService.Login(cardNumber, password);
+
+                if (!loginResult)
+                {
+                    ColoredConsole.WriteLine("Invalid Password".DarkRed());
+                    Console.ReadKey();
+                    break;
+                }
+
                 loggedIn = true;
                 ColoredConsole.WriteLine("Login Successful".DarkGreen());
                 Console.ReadKey();
@@ -55,7 +65,6 @@ while (true)
                 ColoredConsole.WriteLine($"Error: {ex.Message}".DarkRed());
                 Console.ReadKey();
             }
-
             break;
 
         case "2":

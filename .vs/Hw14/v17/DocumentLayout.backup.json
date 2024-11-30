@@ -3,64 +3,96 @@
   "WorkspaceRootPath": "D:\\Hw14\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\entities\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\entities\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\services\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\services\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\services\\transactiionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\services\\transactiionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\repositories\\cardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\repositories\\cardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\contracts\\icardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\contracts\\icardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\contracts\\icardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\contracts\\icardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\configuration\\cardconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\configuration\\cardconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\repositories\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\repositories\\transactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\configuration\\bankdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\configuration\\bankdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\configuration\\transactionconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\configuration\\transactionconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\dto\\gettransactionsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\dto\\gettransactionsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\entities\\transactiion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\entities\\transactiion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\contracts\\itransactiionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\contracts\\itransactiionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\contracts\\itransactiionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\contracts\\itransactiionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\contracts\\itransactiionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\contracts\\itransactiionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\contracts\\icardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\contracts\\icardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\repositories\\cardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\repositories\\cardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\configuration\\bankdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\configuration\\bankdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\services\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\services\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\contracts\\icardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\contracts\\icardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\entities\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\entities\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\configuration\\userconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\configuration\\userconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Hw14\\Hw14\\Migrations\\20241130203111_Code.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Hw14\\Migrations\\20241130203111_Code.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Hw14\\Hw14\\Migrations\\20241130202738_AddUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Hw14\\Migrations\\20241130202738_AddUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\configuration\\cardconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\configuration\\cardconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\configuration\\transactionconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\configuration\\transactionconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Hw14\\Hw14\\Migrations\\20241130194651_AddUser0.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Hw14\\Migrations\\20241130194651_AddUser0.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Hw14\\Hw14\\Migrations\\20241130194310_AddUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Hw14\\Migrations\\20241130194310_AddUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Hw14\\Hw14\\Migrations\\20241130194045_AddUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Hw14\\Migrations\\20241130194045_AddUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Hw14\\Hw14\\Migrations\\20241130193906_AddUser0.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Hw14\\Migrations\\20241130193906_AddUser0.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hmosl\\source\\repos\\Hw14\\Hw14\\Migrations\\20241129073701_hw14.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -72,10 +104,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\framework\\securityhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\framework\\securityhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|d:\\hw14\\hw14\\migrations\\20241129080953_hw14.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF69EE74-71CC-4AFE-8DF3-0F0BC1872904}|Hw14\\Hw14.csproj|solutionrelative:hw14\\migrations\\20241129080953_hw14.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -85,7 +113,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 298,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -105,52 +133,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CardRepository.cs",
-              "DocumentMoniker": "D:\\Hw14\\Hw14\\Repositories\\CardRepository.cs",
-              "RelativeDocumentMoniker": "Hw14\\Repositories\\CardRepository.cs",
-              "ToolTip": "D:\\Hw14\\Hw14\\Repositories\\CardRepository.cs",
-              "RelativeToolTip": "Hw14\\Repositories\\CardRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA2AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "TransactiionService.cs",
+              "DocumentMoniker": "D:\\Hw14\\Hw14\\Services\\TransactiionService.cs",
+              "RelativeDocumentMoniker": "Hw14\\Services\\TransactiionService.cs",
+              "ToolTip": "D:\\Hw14\\Hw14\\Services\\TransactiionService.cs",
+              "RelativeToolTip": "Hw14\\Services\\TransactiionService.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAADwv2UAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T06:00:39.952Z",
+              "WhenOpened": "2024-11-29T06:01:32.479Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CardService.cs",
-              "DocumentMoniker": "D:\\Hw14\\Hw14\\Services\\CardService.cs",
-              "RelativeDocumentMoniker": "Hw14\\Services\\CardService.cs",
-              "ToolTip": "D:\\Hw14\\Hw14\\Services\\CardService.cs",
-              "RelativeToolTip": "Hw14\\Services\\CardService.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAxwFIAAAA0AAAAAAAAAA==",
+              "Title": "TransactionRepository.cs",
+              "DocumentMoniker": "D:\\Hw14\\Hw14\\Repositories\\TransactionRepository.cs",
+              "RelativeDocumentMoniker": "Hw14\\Repositories\\TransactionRepository.cs",
+              "ToolTip": "D:\\Hw14\\Hw14\\Repositories\\TransactionRepository.cs",
+              "RelativeToolTip": "Hw14\\Repositories\\TransactionRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAIA0wB0AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T06:00:56.495Z",
+              "WhenOpened": "2024-11-29T06:01:19.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ITransactiionRepository.cs",
+              "DocumentMoniker": "D:\\Hw14\\Hw14\\Contracts\\ITransactiionRepository.cs",
+              "RelativeDocumentMoniker": "Hw14\\Contracts\\ITransactiionRepository.cs",
+              "ToolTip": "D:\\Hw14\\Hw14\\Contracts\\ITransactiionRepository.cs",
+              "RelativeToolTip": "Hw14\\Contracts\\ITransactiionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T05:52:18.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ITransactiionService.cs",
+              "DocumentMoniker": "D:\\Hw14\\Hw14\\Contracts\\ITransactiionService.cs",
+              "RelativeDocumentMoniker": "Hw14\\Contracts\\ITransactiionService.cs",
+              "ToolTip": "D:\\Hw14\\Hw14\\Contracts\\ITransactiionService.cs",
+              "RelativeToolTip": "Hw14\\Contracts\\ITransactiionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T05:52:28.499Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Card.cs",
-              "DocumentMoniker": "D:\\Hw14\\Hw14\\Entities\\Card.cs",
-              "RelativeDocumentMoniker": "Hw14\\Entities\\Card.cs",
-              "ToolTip": "D:\\Hw14\\Hw14\\Entities\\Card.cs",
-              "RelativeToolTip": "Hw14\\Entities\\Card.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T05:33:14.078Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Hw14\\Hw14\\Program.cs",
               "RelativeDocumentMoniker": "Hw14\\Program.cs",
               "ToolTip": "D:\\Hw14\\Hw14\\Program.cs",
               "RelativeToolTip": "Hw14\\Program.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAvwIkAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAMwFIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T19:10:45.306Z",
               "EditorCaption": ""
@@ -158,66 +199,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "TransactiionService.cs",
-              "DocumentMoniker": "D:\\Hw14\\Hw14\\Services\\TransactiionService.cs",
-              "RelativeDocumentMoniker": "Hw14\\Services\\TransactiionService.cs",
-              "ToolTip": "D:\\Hw14\\Hw14\\Services\\TransactiionService.cs",
-              "RelativeToolTip": "Hw14\\Services\\TransactiionService.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAYwBQAAAAxAAAAAAAAAA==",
+              "Title": "GetTransactionsDto.cs",
+              "DocumentMoniker": "D:\\Hw14\\Hw14\\Dto\\GetTransactionsDto.cs",
+              "RelativeDocumentMoniker": "Hw14\\Dto\\GetTransactionsDto.cs",
+              "ToolTip": "D:\\Hw14\\Hw14\\Dto\\GetTransactionsDto.cs",
+              "RelativeToolTip": "Hw14\\Dto\\GetTransactionsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T06:01:32.479Z",
+              "WhenOpened": "2024-11-30T22:35:12.319Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
+              "Title": "Transactiion.cs",
+              "DocumentMoniker": "D:\\Hw14\\Hw14\\Entities\\Transactiion.cs",
+              "RelativeDocumentMoniker": "Hw14\\Entities\\Transactiion.cs",
+              "ToolTip": "D:\\Hw14\\Hw14\\Entities\\Transactiion.cs",
+              "RelativeToolTip": "Hw14\\Entities\\Transactiion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T05:34:49.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ICardService.cs",
               "DocumentMoniker": "D:\\Hw14\\Hw14\\Contracts\\ICardService.cs",
               "RelativeDocumentMoniker": "Hw14\\Contracts\\ICardService.cs",
               "ToolTip": "D:\\Hw14\\Hw14\\Contracts\\ICardService.cs",
               "RelativeToolTip": "Hw14\\Contracts\\ICardService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T05:51:50.004Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CardConfig.cs",
-              "DocumentMoniker": "D:\\Hw14\\Hw14\\Configuration\\CardConfig.cs",
-              "RelativeDocumentMoniker": "Hw14\\Configuration\\CardConfig.cs",
-              "ToolTip": "D:\\Hw14\\Hw14\\Configuration\\CardConfig.cs",
-              "RelativeToolTip": "Hw14\\Configuration\\CardConfig.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCgAAAA7AAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "CardRepository.cs",
+              "DocumentMoniker": "D:\\Hw14\\Hw14\\Repositories\\CardRepository.cs",
+              "RelativeDocumentMoniker": "Hw14\\Repositories\\CardRepository.cs",
+              "ToolTip": "D:\\Hw14\\Hw14\\Repositories\\CardRepository.cs",
+              "RelativeToolTip": "Hw14\\Repositories\\CardRepository.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAwwAwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T05:45:30.946Z",
+              "WhenOpened": "2024-11-29T06:00:39.952Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "ICardRepository.cs",
               "DocumentMoniker": "D:\\Hw14\\Hw14\\Contracts\\ICardRepository.cs",
               "RelativeDocumentMoniker": "Hw14\\Contracts\\ICardRepository.cs",
               "ToolTip": "D:\\Hw14\\Hw14\\Contracts\\ICardRepository.cs",
               "RelativeToolTip": "Hw14\\Contracts\\ICardRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T05:51:35.108Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TransactionRepository.cs",
-              "DocumentMoniker": "D:\\Hw14\\Hw14\\Repositories\\TransactionRepository.cs",
-              "RelativeDocumentMoniker": "Hw14\\Repositories\\TransactionRepository.cs",
-              "ToolTip": "D:\\Hw14\\Hw14\\Repositories\\TransactionRepository.cs",
-              "RelativeToolTip": "Hw14\\Repositories\\TransactionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "CardService.cs",
+              "DocumentMoniker": "D:\\Hw14\\Hw14\\Services\\CardService.cs",
+              "RelativeDocumentMoniker": "Hw14\\Services\\CardService.cs",
+              "ToolTip": "D:\\Hw14\\Hw14\\Services\\CardService.cs",
+              "RelativeToolTip": "Hw14\\Services\\CardService.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwDsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T06:01:19.359Z",
+              "WhenOpened": "2024-11-29T06:00:56.495Z",
               "EditorCaption": ""
             },
             {
@@ -228,87 +282,157 @@
               "RelativeDocumentMoniker": "Hw14\\Configuration\\BankDbContext.cs",
               "ToolTip": "D:\\Hw14\\Hw14\\Configuration\\BankDbContext.cs",
               "RelativeToolTip": "Hw14\\Configuration\\BankDbContext.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T05:36:24.44Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
+              "Title": "Card.cs",
+              "DocumentMoniker": "D:\\Hw14\\Hw14\\Entities\\Card.cs",
+              "RelativeDocumentMoniker": "Hw14\\Entities\\Card.cs",
+              "ToolTip": "D:\\Hw14\\Hw14\\Entities\\Card.cs",
+              "RelativeToolTip": "Hw14\\Entities\\Card.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T05:33:14.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserConfig.cs",
+              "DocumentMoniker": "D:\\Hw14\\Hw14\\Configuration\\UserConfig.cs",
+              "RelativeDocumentMoniker": "Hw14\\Configuration\\UserConfig.cs",
+              "ToolTip": "D:\\Hw14\\Hw14\\Configuration\\UserConfig.cs",
+              "RelativeToolTip": "Hw14\\Configuration\\UserConfig.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T18:19:48.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Hw14\\Hw14\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Hw14\\Entities\\User.cs",
               "ToolTip": "D:\\Hw14\\Hw14\\Entities\\User.cs",
               "RelativeToolTip": "Hw14\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-30T14:02:23.217Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
+              "Title": "20241130203111_Code.cs",
+              "DocumentMoniker": "D:\\Hw14\\Hw14\\Migrations\\20241130203111_Code.cs",
+              "RelativeDocumentMoniker": "Hw14\\Migrations\\20241130203111_Code.cs",
+              "ToolTip": "D:\\Hw14\\Hw14\\Migrations\\20241130203111_Code.cs",
+              "RelativeToolTip": "Hw14\\Migrations\\20241130203111_Code.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T20:31:11.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "20241130202738_AddUser.cs",
+              "DocumentMoniker": "D:\\Hw14\\Hw14\\Migrations\\20241130202738_AddUser.cs",
+              "RelativeDocumentMoniker": "Hw14\\Migrations\\20241130202738_AddUser.cs",
+              "ToolTip": "D:\\Hw14\\Hw14\\Migrations\\20241130202738_AddUser.cs",
+              "RelativeToolTip": "Hw14\\Migrations\\20241130202738_AddUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T20:27:38.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CardConfig.cs",
+              "DocumentMoniker": "D:\\Hw14\\Hw14\\Configuration\\CardConfig.cs",
+              "RelativeDocumentMoniker": "Hw14\\Configuration\\CardConfig.cs",
+              "ToolTip": "D:\\Hw14\\Hw14\\Configuration\\CardConfig.cs",
+              "RelativeToolTip": "Hw14\\Configuration\\CardConfig.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAcwB4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T05:45:30.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "TransactionConfig.cs",
               "DocumentMoniker": "D:\\Hw14\\Hw14\\Configuration\\TransactionConfig.cs",
               "RelativeDocumentMoniker": "Hw14\\Configuration\\TransactionConfig.cs",
               "ToolTip": "D:\\Hw14\\Hw14\\Configuration\\TransactionConfig.cs",
               "RelativeToolTip": "Hw14\\Configuration\\TransactionConfig.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAcwCoAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAcwCIAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T05:45:48.036Z"
+              "WhenOpened": "2024-11-29T05:45:48.036Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Transactiion.cs",
-              "DocumentMoniker": "D:\\Hw14\\Hw14\\Entities\\Transactiion.cs",
-              "RelativeDocumentMoniker": "Hw14\\Entities\\Transactiion.cs",
-              "ToolTip": "D:\\Hw14\\Hw14\\Entities\\Transactiion.cs",
-              "RelativeToolTip": "Hw14\\Entities\\Transactiion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
+              "DocumentIndex": 19,
+              "Title": "20241130194651_AddUser0.cs",
+              "DocumentMoniker": "D:\\Hw14\\Hw14\\Migrations\\20241130194651_AddUser0.cs",
+              "RelativeDocumentMoniker": "Hw14\\Migrations\\20241130194651_AddUser0.cs",
+              "ToolTip": "D:\\Hw14\\Hw14\\Migrations\\20241130194651_AddUser0.cs",
+              "RelativeToolTip": "Hw14\\Migrations\\20241130194651_AddUser0.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T05:34:49.286Z"
+              "WhenOpened": "2024-11-30T19:46:51.999Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ITransactiionService.cs",
-              "DocumentMoniker": "D:\\Hw14\\Hw14\\Contracts\\ITransactiionService.cs",
-              "RelativeDocumentMoniker": "Hw14\\Contracts\\ITransactiionService.cs",
-              "ToolTip": "D:\\Hw14\\Hw14\\Contracts\\ITransactiionService.cs",
-              "RelativeToolTip": "Hw14\\Contracts\\ITransactiionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAABFAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "20241130194310_AddUser.cs",
+              "DocumentMoniker": "D:\\Hw14\\Hw14\\Migrations\\20241130194310_AddUser.cs",
+              "RelativeDocumentMoniker": "Hw14\\Migrations\\20241130194310_AddUser.cs",
+              "ToolTip": "D:\\Hw14\\Hw14\\Migrations\\20241130194310_AddUser.cs",
+              "RelativeToolTip": "Hw14\\Migrations\\20241130194310_AddUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T05:52:28.499Z"
+              "WhenOpened": "2024-11-30T19:43:11.074Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ITransactiionRepository.cs",
-              "DocumentMoniker": "D:\\Hw14\\Hw14\\Contracts\\ITransactiionRepository.cs",
-              "RelativeDocumentMoniker": "Hw14\\Contracts\\ITransactiionRepository.cs",
-              "ToolTip": "D:\\Hw14\\Hw14\\Contracts\\ITransactiionRepository.cs",
-              "RelativeToolTip": "Hw14\\Contracts\\ITransactiionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
+              "DocumentIndex": 21,
+              "Title": "20241130194045_AddUser.cs",
+              "DocumentMoniker": "D:\\Hw14\\Hw14\\Migrations\\20241130194045_AddUser.cs",
+              "RelativeDocumentMoniker": "Hw14\\Migrations\\20241130194045_AddUser.cs",
+              "ToolTip": "D:\\Hw14\\Hw14\\Migrations\\20241130194045_AddUser.cs",
+              "RelativeToolTip": "Hw14\\Migrations\\20241130194045_AddUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T05:52:18.743Z"
+              "WhenOpened": "2024-11-30T19:40:45.286Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "20241129080953_hw14.cs",
-              "DocumentMoniker": "D:\\Hw14\\Hw14\\Migrations\\20241129080953_hw14.cs",
-              "RelativeDocumentMoniker": "Hw14\\Migrations\\20241129080953_hw14.cs",
-              "ToolTip": "D:\\Hw14\\Hw14\\Migrations\\20241129080953_hw14.cs",
-              "RelativeToolTip": "Hw14\\Migrations\\20241129080953_hw14.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAlAAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "20241130193906_AddUser0.cs",
+              "DocumentMoniker": "D:\\Hw14\\Hw14\\Migrations\\20241130193906_AddUser0.cs",
+              "RelativeDocumentMoniker": "Hw14\\Migrations\\20241130193906_AddUser0.cs",
+              "ToolTip": "D:\\Hw14\\Hw14\\Migrations\\20241130193906_AddUser0.cs",
+              "RelativeToolTip": "Hw14\\Migrations\\20241130193906_AddUser0.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T08:09:53.785Z"
+              "WhenOpened": "2024-11-30T19:39:06.202Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 23,
               "Title": "20241129073701_hw14.cs",
               "DocumentMoniker": "C:\\Users\\hmosl\\source\\repos\\Hw14\\Hw14\\Migrations\\20241129073701_hw14.cs",
               "ToolTip": "C:\\Users\\hmosl\\source\\repos\\Hw14\\Hw14\\Migrations\\20241129073701_hw14.cs",
@@ -318,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 24,
               "Title": "Ensure.cs",
               "DocumentMoniker": "D:\\Hw14\\Hw14\\Framework\\Ensure.cs",
               "RelativeDocumentMoniker": "Hw14\\Framework\\Ensure.cs",
@@ -330,7 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 25,
               "Title": "SecurityHelper.cs",
               "DocumentMoniker": "D:\\Hw14\\Hw14\\Framework\\SecurityHelper.cs",
               "RelativeDocumentMoniker": "Hw14\\Framework\\SecurityHelper.cs",

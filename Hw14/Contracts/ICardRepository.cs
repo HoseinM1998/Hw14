@@ -9,9 +9,15 @@ namespace Hw14.Contracts
 {
     public interface ICardRepository
     {
+        bool PasswordIsValid(string cardNumber, string password);
+        void SetWrongPasswordTry(string cardNumber);
+        int GetWrongPasswordTry(string cardNumber);
+        void ClearWrongPasswordTry(string cardNumber);
         public Card GetCard(string cardNumber);
-        public void UpdateCard(Card card);
+        void Withdraw(string cardNumber, float amount);
+        void Deposit(string cardNumber, float amount);
         public float GetCardBalance(string cardNumber);
+
 
 
 

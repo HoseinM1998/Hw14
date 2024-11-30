@@ -1,4 +1,5 @@
-﻿using Hw14.Entities;
+﻿using Hw14.Dto;
+using Hw14.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,8 @@ namespace Hw14.Contracts
     public interface ITransactiionRepository
     {
         public void AddTransaction(Transactiion transaction);
-
-        public List<Transactiion> GetTransactionsByCardNumber(string cardNumber);
+        float DailyWithdrawal(string cardNumber);
+        public List<GetTransactionsDto> GetListOfTransactions(string cardNumber);
 
 
     }

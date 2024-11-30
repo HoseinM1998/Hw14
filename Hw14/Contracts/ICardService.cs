@@ -10,11 +10,9 @@ namespace Hw14.Contracts
     public interface ICardService
     {
         public bool Login(string cardNumber, string password);
-        public void Logout();
-        public Card GetCurrentCard();
-        public Card GetCard(string cardNumber);
+
         public float GetCardBalance(string cardNumber);
 
-        public bool UpdateCardBalance(string cardNumber, float amount);
+        public bool GetCardOnline(string cardNumber);
     }
 }

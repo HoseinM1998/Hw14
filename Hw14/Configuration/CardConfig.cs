@@ -13,8 +13,7 @@ namespace Hw14.Configuration
     {
         public void Configure(EntityTypeBuilder<Card> builder)
         {
-        
-            builder.HasKey(c => c.CardNumber);
+            builder.HasKey(c => c.Id);
 
             builder.Property(c => c.CardNumber)
                 .IsRequired()
@@ -30,15 +29,6 @@ namespace Hw14.Configuration
             builder.Property(c => c.Password)
                 .IsRequired()
                 .HasMaxLength(4);
-
-            builder.HasMany(c => c.Transactions)
-            .WithOne(t => t.Card)
-            .HasForeignKey(t => t.SourceCardNumber) 
-            .OnDelete(DeleteBehavior.Restrict);
-
-            builder.HasMany(c => c.Transactions)
-                .WithOne(t => t.Card)
-                .HasForeignKey(t => t.DestinationCardNumber);
 
         }
     }

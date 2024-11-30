@@ -3,6 +3,7 @@ using Colors.Net.StringColorExtensions;
 using ConsoleTables;
 using Hw14.Configuration;
 using Hw14.Contracts;
+using Hw14.Dto;
 using Hw14.Entities;
 using Hw14.Repositories;
 using Hw14.Services;
@@ -11,6 +12,7 @@ using static Hw14.Repositories.TransactionRepository;
 ICardService cardService = new CardService();
 ITransactiionService transactionService = new TransactionService();
 bool loggedIn = false;
+string cardNumber = "";  
 
 while (true)
 {
@@ -18,37 +20,19 @@ while (true)
     ColoredConsole.WriteLine("********* Welcome to Bank System *********".DarkGreen());
     ColoredConsole.WriteLine("1.Login".DarkBlue());
     ColoredConsole.WriteLine("2.Exit".DarkRed());
-
     string choice = Console.ReadLine();
 
     switch (choice)
     {
         case "1":
             ColoredConsole.WriteLine("Enter Card Number: ".DarkYellow());
-            string cardNumber = Console.ReadLine();
+            cardNumber = Console.ReadLine();  
             ColoredConsole.WriteLine("Enter Password: ".DarkYellow());
             string password = Console.ReadLine();
 
             try
             {
-                var card = cardService.GetCard(cardNumber);
-
-                if (card == null)
-                {
-                    ColoredConsole.WriteLine("User Not Found".DarkRed());
-                    Console.ReadKey();
-                    break;
-                }
-
-                if (!card.IsActive)
-                {
-                    ColoredConsole.WriteLine("User Blocked".DarkRed());
-                    Console.ReadKey();
-                    break;
-                }
-
                 bool loginResult = cardService.Login(cardNumber, password);
-
                 if (!loginResult)
                 {
                     ColoredConsole.WriteLine("Invalid Password".DarkRed());
@@ -78,7 +62,6 @@ while (true)
 
     if (loggedIn)
     {
-        var currentCard = cardService.GetCurrentCard();
         try
         {
             bool inMenu = true;
@@ -97,10 +80,10 @@ while (true)
                 switch (input)
                 {
                     case "1":
-                        var transactions = transactionService.GetTransactionsByCardNumber(currentCard.CardNumber);
+                        var transactions = transactionService.GetTransactionsByCardNumber(cardNumber);
                         if (transactions.Any())
                         {
-                            var table = ConsoleTable.From<Transactiion>(transactions);
+                            var table = ConsoleTable.From<GetTransactionsDto>(transactions); 
                             Console.ForegroundColor = ConsoleColor.DarkCyan;
                             table.Write();
                             Console.ResetColor();
@@ -118,11 +101,13 @@ while (true)
                         ColoredConsole.WriteLine("Enter Recipient Card Number: ".DarkYellow());
                         string recipientCardNumber = Console.ReadLine();
 
-                        bool transferSuccess = transactionService.TransferFunds(currentCard.CardNumber, recipientCardNumber, amount);
+                        bool transferSuccess = transactionService.TransferFunds(cardNumber, recipientCardNumber, amount);
+                        var balance = cardService.GetCardBalance(cardNumber);
+
                         if (transferSuccess)
                         {
                             ColoredConsole.WriteLine("Transfer Successful".DarkGreen());
-                            ColoredConsole.WriteLine($"Balance {currentCard.Balance}$-{amount}$".DarkBlue());
+                            ColoredConsole.WriteLine($"Balance {balance+amount}$-{amount} = New Balance {balance}$".DarkBlue());
 
                         }
                         else
@@ -135,8 +120,8 @@ while (true)
                     case "3":
                         try
                         {
-                            var balance = cardService.GetCardBalance(currentCard.CardNumber);
-                            ColoredConsole.WriteLine($"Your Balance: {balance}$".DarkGreen());
+                            var balance1 = cardService.GetCardBalance(cardNumber);
+                            ColoredConsole.WriteLine($"Your Balance: {balance1}$".DarkGreen());
                         }
                         catch (Exception ex)
                         {
@@ -145,7 +130,7 @@ while (true)
                         Console.ReadKey();
                         break;
                     case "4":
-                        cardService.Logout();
+                      
                         inMenu = false;
                         ColoredConsole.WriteLine("Logged Out".DarkRed());
                         Console.ReadKey();

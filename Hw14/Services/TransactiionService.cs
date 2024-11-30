@@ -1,4 +1,5 @@
 ﻿using Hw14.Contracts;
+using Hw14.Dto;
 using Hw14.Entities;
 using Hw14.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -22,9 +23,19 @@ namespace Hw14.Services
         }
         public bool TransferFunds(string sourceCardNumber, string destinationCardNumber, float amount)
         {
+            var isSuccess = false;
             if (string.IsNullOrEmpty(sourceCardNumber) || string.IsNullOrEmpty(destinationCardNumber))
             {
                 throw new ArgumentException("Card numbers cannot be null or empty");
+            }
+            if (sourceCardNumber.Length < 16 || sourceCardNumber.Length > 16)
+            {
+                throw new ArgumentException("sourceCardNumber is not validy");
+            }
+
+            if (destinationCardNumber.Length < 16 || destinationCardNumber.Length > 16)
+            {
+                throw new ArgumentException("sourceCardNumber is not validy");
             }
             var totalToday = GetTotalTransactionsForToday(sourceCardNumber);
 
@@ -48,7 +59,7 @@ namespace Hw14.Services
 
             if (!sourceCard.IsActive || !destinationCard.IsActive)
             {
-                throw new InvalidOperationException("One or both cards are inactive");
+                throw new InvalidOperationException("Blocked Your Account");
             }
 
             if (sourceCard.Balance < amount)
@@ -56,54 +67,51 @@ namespace Hw14.Services
                 throw new InvalidOperationException("Insufficient funds on source card");
             }
 
+            _cardRepository.Withdraw(sourceCardNumber, amount);
+
             try
             {
-                sourceCard.Balance -= amount;
-                destinationCard.Balance += amount;
+                _cardRepository.Deposit(destinationCardNumber, amount);
+                isSuccess = true;
+                return true;
 
-                var transactionRecord = new Transactiion
+            }
+            catch (Exception e)
+            {
+                _cardRepository.Deposit(sourceCardNumber, amount);
+                isSuccess = false;
+                return false;
+                throw new InvalidOperationException("Filed|Return Amont");
+
+            }
+            finally
+            {
+                var transaction = new Transactiion()
                 {
-                    SourceCardNumber = sourceCardNumber,
-                    DestinationCardNumber = destinationCardNumber,
+                    SourceCardNumber = sourceCard.Id,
+                    DestinationCardNumber = destinationCard.Id,
                     Amount = amount,
                     TransactionDate = DateTime.Now,
-                    IsSuccessful = true
+                    IsSuccessful = isSuccess
                 };
 
-                _transactionRepository.AddTransaction(transactionRecord);
-                _cardRepository.UpdateCard(sourceCard);
-                _cardRepository.UpdateCard(destinationCard);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-
-                Console.WriteLine($"Inner Exception: {ex.InnerException.Message}");
-
-                sourceCard.Balance += amount;
-                _cardRepository.UpdateCard(sourceCard);
-                throw new InvalidOperationException("Error Amount returned");
-
+                _transactionRepository.AddTransaction(transaction);
             }
         }
 
-        public List<Transactiion> GetTransactionsByCardNumber(string cardNumber)
+        public List<GetTransactionsDto> GetTransactionsByCardNumber(string cardNumber)
         {
             if (string.IsNullOrEmpty(cardNumber))
             {
                 throw new ArgumentException("Card number cannot be null or empty", nameof(cardNumber));
             }
 
-            return _transactionRepository.GetTransactionsByCardNumber(cardNumber);
+            return _transactionRepository.GetListOfTransactions(cardNumber);
         }
 
         public float GetTotalTransactionsForToday(string cardNumber)
         {
-            var today = DateTime.Today;
-            var transactions = _transactionRepository.GetTransactionsByCardNumber(cardNumber)
-                                                      .Where(t => t.TransactionDate.Date == today)
-                                                      .Sum(t => t.Amount);
+            var transactions = _transactionRepository.DailyWithdrawal(cardNumber);
 
             return transactions;
         }

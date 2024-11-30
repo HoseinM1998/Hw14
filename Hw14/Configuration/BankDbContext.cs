@@ -12,11 +12,12 @@ namespace Hw14.Configuration
     {
         public DbSet<Card> Cards { get; set; }
         public DbSet<Transactiion> Transactions { get; set; }
+        public DbSet<User> Users { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new CardConfig());
             modelBuilder.ApplyConfiguration(new TransactionConfig());
-
+            modelBuilder.ApplyConfiguration(new UserConfig());
             base.OnModelCreating(modelBuilder);
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

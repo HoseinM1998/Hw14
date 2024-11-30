@@ -1,5 +1,6 @@
 ﻿using Hw14.Configuration;
 using Hw14.Contracts;
+using Hw14.Dto;
 using Hw14.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -25,15 +26,28 @@ namespace Hw14.Repositories
             _context.Transactions.Add(transaction);
             _context.SaveChanges();
         }
-        public List<Transactiion> GetTransactionsByCardNumber(string cardNumber)
+
+        public List<GetTransactionsDto> GetListOfTransactions(string cardNumber)
         {
             return _context.Transactions
-                .Where(t => t.SourceCardNumber == cardNumber || t.DestinationCardNumber == cardNumber)
-                .OrderByDescending(t => t.TransactionDate)
-                .ToList();
+                .Where(x => x.SourceCard.CardNumber == cardNumber || x.DestinationCard.CardNumber == cardNumber)
+                .Select(x => new GetTransactionsDto
+                {
+                    SourceCardNumber = x.SourceCard.CardNumber,
+                    DestinationsCardNumber = x.DestinationCard.CardNumber,
+                    TransactionDate = x.TransactionDate,
+                    Amount = x.Amount,
+                    IsSuccess = x.IsSuccessful,
+                }).ToList();
         }
 
-
+        public float DailyWithdrawal(string cardNumber)
+        {
+            var amountOfTransactions = _context.Transactions
+                .Where(x => x.TransactionDate == DateTime.Now.Date && x.SourceCard.CardNumber == cardNumber)
+                .Sum(x => x.Amount);
+            return amountOfTransactions;
+        }
     }
 
 }

@@ -14,5 +14,11 @@ namespace Hw14.Contracts
         public float GetCardBalance(string cardNumber);
 
         public bool GetCardOnline(string cardNumber);
+        
+        public string ChangePassword(string cardNumber,string newPass);
+
+        public Card GetCardByCardNumber(string cardNumber);
+
+
     }
 }

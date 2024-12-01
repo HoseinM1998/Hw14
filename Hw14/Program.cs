@@ -98,21 +98,52 @@ while (true)
                     case "2":
                         ColoredConsole.WriteLine("Enter Amount to Transfer: ".DarkYellow());
                         float amount = float.Parse(Console.ReadLine());
+
                         ColoredConsole.WriteLine("Enter Recipient Card Number: ".DarkYellow());
                         string recipientCardNumber = Console.ReadLine();
 
-                        bool transferSuccess = transactionService.TransferFunds(cardNumber, recipientCardNumber, amount);
-                        var balance = cardService.GetCardBalance(cardNumber);
-
-                        if (transferSuccess)
+                        var recipientCard = cardService.GetCardByCardNumber(recipientCardNumber);
+                        if (recipientCard != null)
                         {
-                            ColoredConsole.WriteLine("Transfer Successful".DarkGreen());
-                            ColoredConsole.WriteLine($"Balance {balance+amount}$-{amount} = New Balance {balance}$".DarkBlue());
+                            ColoredConsole.WriteLine($"Recipient Card Information:".DarkYellow());
+                            ColoredConsole.WriteLine($"CardNumber: {recipientCardNumber}".DarkGray());
+                            ColoredConsole.WriteLine($"Full Name: {recipientCard.User.FullName}".DarkGreen());
+                            ColoredConsole.WriteLine($"Bank: {recipientCard.HolderName}".DarkBlue());
+                            ColoredConsole.WriteLine($"Transfer Amount: {amount}$".DarkCyan());
 
+
+                            ColoredConsole.WriteLine("Do You Want To Continue?".DarkMagenta());
+                            ColoredConsole.WriteLine("1:Confirm | 2:Cancel".DarkYellow());
+
+                            string userInput = Console.ReadLine();
+
+                            if (userInput == "1") 
+                            {
+                                bool transferSuccess = transactionService.TransferFunds(cardNumber, recipientCardNumber, amount);
+                                var balance = cardService.GetCardBalance(cardNumber);
+
+                                if (transferSuccess)
+                                {
+                                    ColoredConsole.WriteLine("Transfer Successful".DarkGreen());
+                                    ColoredConsole.WriteLine($"New Balance {balance}$".DarkBlue());
+                                }
+                                else
+                                {
+                                    ColoredConsole.WriteLine("Transfer Failed".DarkRed());
+                                }
+                            }
+                            else if (userInput == "2") 
+                            {
+                                ColoredConsole.WriteLine("Transfer Canceled".DarkRed());
+                            }
+                            else
+                            {
+                                ColoredConsole.WriteLine("Invalid Option".DarkRed());
+                            }
                         }
                         else
                         {
-                            ColoredConsole.WriteLine("Transfer Failed".DarkRed());
+                            ColoredConsole.WriteLine("Recipient Card Not Found".DarkRed());
                         }
                         Console.ReadKey();
                         break;

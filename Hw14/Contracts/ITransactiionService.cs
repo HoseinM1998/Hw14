@@ -14,6 +14,10 @@ namespace Hw14.Contracts
 
         public List<GetTransactionsDto> GetTransactionsByCardNumber(string cardNumber);
         public float GetTotalTransactionsForToday(string cardNumber);
+        public float CalculateFee(string cardNumber, float amount);
+ 
+
+
 
 
     }

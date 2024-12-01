@@ -36,6 +36,7 @@ namespace Hw14.Repositories
                     SourceCardNumber = x.SourceCard.CardNumber,
                     DestinationsCardNumber = x.DestinationCard.CardNumber,
                     TransactionDate = x.TransactionDate,
+                    Fee = x.Fee,
                     Amount = x.Amount,
                     IsSuccess = x.IsSuccessful,
                 }).ToList();
@@ -47,6 +48,20 @@ namespace Hw14.Repositories
                 .Where(x => x.TransactionDate == DateTime.Now.Date && x.SourceCard.CardNumber == cardNumber)
                 .Sum(x => x.Amount);
             return amountOfTransactions;
+        }
+
+        public void UpdateTransactionFee(string cardNumber, float fee)
+        {
+            var transaction = _context.Transactions
+                .FirstOrDefault(x => (x.SourceCard.CardNumber == cardNumber || x.DestinationCard.CardNumber == cardNumber)
+                                      && x.TransactionDate == _context.Transactions.Max(t => t.TransactionDate)); 
+            if (transaction == null)
+            {
+                Console.WriteLine($"Transaction not found for card number {cardNumber}");
+                throw new InvalidOperationException("Transaction not found");
+            }
+            transaction.Fee = fee;
+            _context.SaveChanges();
         }
     }
 

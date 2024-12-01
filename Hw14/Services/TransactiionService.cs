@@ -26,16 +26,16 @@ namespace Hw14.Services
             var isSuccess = false;
             if (string.IsNullOrEmpty(sourceCardNumber) || string.IsNullOrEmpty(destinationCardNumber))
             {
-                throw new ArgumentException("Card numbers cannot be null or empty");
+                throw new ArgumentException("Can Not Null");
             }
-            if (sourceCardNumber.Length < 16 || sourceCardNumber.Length > 16)
+            if (sourceCardNumber.Length != 16 )
             {
-                throw new ArgumentException("sourceCardNumber is not validy");
+                throw new ArgumentException("SourceCardNumber Is Not Valid");
             }
 
-            if (destinationCardNumber.Length < 16 || destinationCardNumber.Length > 16)
+            if (destinationCardNumber.Length != 16 )
             {
-                throw new ArgumentException("sourceCardNumber is not validy");
+                throw new ArgumentException("DestinationCardNumber Is Not Valid");
             }
             var totalToday = GetTotalTransactionsForToday(sourceCardNumber);
 
@@ -44,9 +44,9 @@ namespace Hw14.Services
                 throw new InvalidOperationException("Maximum Amount Allowed Per Day 250$");
             }
 
-            if (amount <= 0)
+            if (amount == 0)
             {
-                throw new ArgumentException("Transfer amount must be greater than zero");
+                throw new ArgumentException("Transfer Amount Must Be Zero");
             }
 
             var sourceCard = _cardRepository.GetCard(sourceCardNumber);
@@ -54,31 +54,32 @@ namespace Hw14.Services
 
             if (sourceCard == null || destinationCard == null)
             {
-                throw new InvalidOperationException("One or both cards are not found");
+                throw new InvalidOperationException("Not Found");
             }
 
             if (!sourceCard.IsActive || !destinationCard.IsActive)
             {
                 throw new InvalidOperationException("Blocked Your Account");
             }
-
-            if (sourceCard.Balance < amount)
+            float fee = CalculateFee(sourceCardNumber, amount); 
+            var amountfee = fee + amount;
+            if (sourceCard.Balance <amountfee)
             {
-                throw new InvalidOperationException("Insufficient funds on source card");
+                throw new InvalidOperationException("Insufficient Funds On Source Card");
             }
 
-            _cardRepository.Withdraw(sourceCardNumber, amount);
+            _cardRepository.Withdraw(sourceCardNumber, amountfee);
 
             try
             {
-                _cardRepository.Deposit(destinationCardNumber, amount);
+                _cardRepository.Deposit(destinationCardNumber, amountfee);
                 isSuccess = true;
                 return true;
 
             }
             catch (Exception e)
             {
-                _cardRepository.Deposit(sourceCardNumber, amount);
+                _cardRepository.Deposit(sourceCardNumber, amountfee);
                 isSuccess = false;
                 return false;
                 throw new InvalidOperationException("Filed|Return Amont");
@@ -88,10 +89,11 @@ namespace Hw14.Services
             {
                 var transaction = new Transactiion()
                 {
-                    SourceCardNumber = sourceCard.Id,
+                    SourceCardNumber = sourceCard.Id,  
                     DestinationCardNumber = destinationCard.Id,
                     Amount = amount,
                     TransactionDate = DateTime.Now,
+                    Fee = fee,
                     IsSuccessful = isSuccess
                 };
 
@@ -103,7 +105,7 @@ namespace Hw14.Services
         {
             if (string.IsNullOrEmpty(cardNumber))
             {
-                throw new ArgumentException("Card number cannot be null or empty", nameof(cardNumber));
+                throw new ArgumentException("Can Not Null", nameof(cardNumber));
             }
 
             return _transactionRepository.GetListOfTransactions(cardNumber);
@@ -115,5 +117,26 @@ namespace Hw14.Services
 
             return transactions;
         }
+
+        public float CalculateFee(string cardNumber, float amount)
+        {
+            var card = _cardRepository.GetCard(cardNumber);
+            if (card == null)
+            {
+                throw new InvalidOperationException("Card Not Found");
+            }
+            float calFee;
+            if (amount >= 1000)
+            {
+                calFee = amount * 0.015f; 
+            }
+            else
+            {
+                calFee = amount * 0.005f; 
+            }
+            _transactionRepository.UpdateTransactionFee(cardNumber, calFee);
+            return calFee;
+        }
+
     }
 }

@@ -13,6 +13,8 @@ namespace Hw14.Contracts
         public void AddTransaction(Transactiion transaction);
         float DailyWithdrawal(string cardNumber);
         public List<GetTransactionsDto> GetListOfTransactions(string cardNumber);
+        public void UpdateTransactionFee(string cardNumber, float fee);
+
 
 
     }

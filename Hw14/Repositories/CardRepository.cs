@@ -31,7 +31,7 @@ namespace Hw14.Repositories
            .FirstOrDefault(x => x.CardNumber == cardNumber);
             if (card is null)
             {
-                throw new Exception($"cannot found card with number {cardNumber}");
+                throw new Exception($"Not Found {cardNumber}");
             }
             card.WrongPasswordTries++;
             _context.SaveChanges();
@@ -43,7 +43,7 @@ namespace Hw14.Repositories
             .FirstOrDefault(x => x.CardNumber == cardNumber);
             if (card is null)
             {
-                throw new Exception($"cannot found card with number {cardNumber}");
+                throw new Exception($"Not Found {cardNumber}");
             }
             return card.WrongPasswordTries;
         }
@@ -54,7 +54,7 @@ namespace Hw14.Repositories
            .FirstOrDefault(x => x.CardNumber == cardNumber);
             if (card is null)
             {
-                throw new Exception($"cannot found card with number {cardNumber}");
+                throw new Exception($"Not Found {cardNumber}");
             }
             card.WrongPasswordTries = 0;
             _context.SaveChanges();
@@ -79,7 +79,7 @@ namespace Hw14.Repositories
             .FirstOrDefault(x => x.CardNumber == cardNumber);
             if (card is null)
             {
-                throw new Exception($"cannot found card with number {cardNumber}");
+                throw new Exception($"Not Found {cardNumber}");
             }
             card.Balance -= amount;
             _context.SaveChanges();
@@ -91,7 +91,7 @@ namespace Hw14.Repositories
          .FirstOrDefault(x => x.CardNumber == cardNumber);
             if (card is null)
             {
-                throw new Exception($"cannot found card with number {cardNumber}");
+                throw new Exception($"Not Fund {cardNumber}");
             }
             card.Balance += amount;
             _context.SaveChanges();
@@ -103,6 +103,25 @@ namespace Hw14.Repositories
                 .Where(c => c.CardNumber == cardNumber)
                 .Select(c => c.Balance)
                 .FirstOrDefault();
+        }
+
+        public string Changepassword(string cardNumber, string newPass)
+        {
+            var card = _context.Cards.FirstOrDefault(x => x.CardNumber == cardNumber);
+            if (card is null)
+            {
+                return $"Cannot find card with number {cardNumber}.";
+            }
+            card.Password = newPass; 
+            _context.SaveChanges();
+            return $"Password For  {card.User.FullName} Changed Successfully";
+        }
+
+        public Card GetCardByCardNumber(string cardNumber)
+        {
+            return _context.Cards
+                .Include(c => c.User) 
+                .FirstOrDefault(c => c.CardNumber == cardNumber);
         }
     }
 }

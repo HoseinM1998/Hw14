@@ -17,6 +17,8 @@ namespace Hw14.Entities
         public float Amount { get; set; }
         public DateTime TransactionDate { get; set; }
         public bool IsSuccessful { get; set; }
-    
+        public float Fee { get; set; }
+
+
     }
 }

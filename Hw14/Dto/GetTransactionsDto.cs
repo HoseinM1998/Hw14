@@ -12,6 +12,7 @@ namespace Hw14.Dto
         public string DestinationsCardNumber { get; set; }
         public DateTime TransactionDate { get; set; }
         public float Amount { get; set; }
+        public float Fee { get; set; }
         public bool IsSuccess { get; set; }
     }
 }

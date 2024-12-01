@@ -62,6 +62,33 @@ namespace Hw14.Services
             }
             return true;
         }
+
+        public string ChangePassword(string cardNumber, string newPass)
+        {
+            if(newPass == null)
+            {
+                return "Password Not Null";
+            }
+            if(newPass.Length>4 && newPass.Length<4)
+            {
+                return "Password in == 4Digit";
+            }
+             _cardRepository.Changepassword(cardNumber, newPass);
+                return "Change password Successful";
+        }
+
+        public Card GetCardByCardNumber(string cardNumber)
+        {
+            var card = _cardRepository.GetCardByCardNumber(cardNumber);
+            if (card == null)
+            {
+                Console.WriteLine("Card not found!");
+                return null;
+            }
+            return card;
+        }
+
+
     }
 }
 

@@ -11,14 +11,9 @@ namespace Hw14.Contracts
     public interface ITransactiionService
     {
         public bool TransferFunds(string sourceCardNumber, string destinationCardNumber, float amount);
-
         public List<GetTransactionsDto> GetTransactionsByCardNumber(string cardNumber);
         public float GetTotalTransactionsForToday(string cardNumber);
         public float CalculateFee(string cardNumber, float amount);
  
-
-
-
-
     }
 }

@@ -297,3 +297,4 @@ D:\Hw14\Hw14\obj\Debug\net9.0\refint\Hw14.dll
 D:\Hw14\Hw14\obj\Debug\net9.0\Hw14.pdb
 D:\Hw14\Hw14\obj\Debug\net9.0\Hw14.genruntimeconfig.cache
 D:\Hw14\Hw14\obj\Debug\net9.0\ref\Hw14.dll
+D:\Hw14\Hw14\bin\Debug\net9.0\Newtonsoft.Json.dll

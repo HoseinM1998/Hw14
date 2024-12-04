@@ -16,11 +16,13 @@ namespace Hw14.Services
     {
         private readonly CardRepository _cardRepository;
         private readonly TransactionRepository _transactionRepository;
+
         public TransactionService()
         {
             _transactionRepository = new TransactionRepository();
             _cardRepository = new CardRepository();
         }
+
         public bool TransferFunds(string sourceCardNumber, string destinationCardNumber, float amount)
         {
             var isSuccess = false;
@@ -67,7 +69,6 @@ namespace Hw14.Services
             {
                 throw new InvalidOperationException("Insufficient Funds On Source Card");
             }
-
             _cardRepository.Withdraw(sourceCardNumber, amountfee);
 
             try
@@ -75,15 +76,12 @@ namespace Hw14.Services
                 _cardRepository.Deposit(destinationCardNumber, amountfee);
                 isSuccess = true;
                 return true;
-
             }
             catch (Exception e)
             {
                 _cardRepository.Deposit(sourceCardNumber, amountfee);
                 isSuccess = false;
-                return false;
                 throw new InvalidOperationException("Filed|Return Amont");
-
             }
             finally
             {
@@ -96,7 +94,6 @@ namespace Hw14.Services
                     Fee = fee,
                     IsSuccessful = isSuccess
                 };
-
                 _transactionRepository.AddTransaction(transaction);
             }
         }
@@ -107,14 +104,12 @@ namespace Hw14.Services
             {
                 throw new ArgumentException("Can Not Null", nameof(cardNumber));
             }
-
             return _transactionRepository.GetListOfTransactions(cardNumber);
         }
 
         public float GetTotalTransactionsForToday(string cardNumber)
         {
             var transactions = _transactionRepository.DailyWithdrawal(cardNumber);
-
             return transactions;
         }
 

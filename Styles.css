@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: linear-gradient(63deg, #151619 10%, #18b0ec 100%);
+  font-family: monospace;
+  height: 100vh;
+}
+
+form {
+  align-content: center;
+  background-color: #2d2c3b;
+  width: 500px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+label {
+  display: block;
+  color: white;
+  white-space: nowrap;
+}
+input,
+select,
+textarea,
+button {
+  width: 300px;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 12px;
+  outline: none;
+  border-width: 1px;
+  font-family: inherit;
+}
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+button:hover {
+  background-color: #67f72a;
+  transition: 1s all;
+}
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actions-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+.cancell-btn:hover {
+  background-color: #f73131;
+}
+.exit-btn {
+  margin-bottom: 20px;
+  
+  background-color: #ff4d4d; 
+  color: white;
+  cursor: pointer; 
+
+}
+
+.exit-btn:hover {
+  background-color: #cc0000; 
+}
+
+.center-text {
+  text-align: center;
+  color: white; 
+  font-size: 20px;
+  margin-bottom: 20px;
+}

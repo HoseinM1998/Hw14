@@ -15,10 +15,8 @@ namespace Hw14.Contracts
 
         public bool GetCardOnline(string cardNumber);
         
-        public string ChangePassword(string cardNumber,string newPass);
+        public bool ChangePassword(string cardNumber,string newPass);
 
         public Card GetCardByCardNumber(string cardNumber);
-
-
     }
 }

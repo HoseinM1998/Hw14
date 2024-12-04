@@ -16,13 +16,10 @@ namespace Hw14.Contracts
         public Card GetCard(string cardNumber);
         void Withdraw(string cardNumber, float amount);
         void Deposit(string cardNumber, float amount);
+        public void BlockCard(string cardNumber);
         public float GetCardBalance(string cardNumber);
         string Changepassword(string cardNumber, string newPass);
         public Card GetCardByCardNumber(string cardNumber);
-
-
-
-
 
     }
 }

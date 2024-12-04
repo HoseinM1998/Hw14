@@ -21,8 +21,7 @@ namespace Hw14.Repositories
 
         public bool PasswordIsValid(string cardNumber, string password)
         {
-            _context.Cards.Any(x => x.CardNumber == cardNumber && x.Password == password);
-            return true;
+           return _context.Cards.Any(x => x.CardNumber == cardNumber && x.Password == password);
         }
 
         public void SetWrongPasswordTry(string cardNumber)
@@ -96,6 +95,16 @@ namespace Hw14.Repositories
             card.Balance += amount;
             _context.SaveChanges();
         }
+        public void BlockCard(string cardNumber)
+        {
+            var card = _context.Cards.FirstOrDefault(x => x.CardNumber == cardNumber);
+            if (card == null)
+            {
+                throw new Exception($"Not Found");
+            }
+            card.IsActive = false;  
+            _context.SaveChanges();  
+        }
 
         public float GetCardBalance(string cardNumber)
         {
@@ -110,11 +119,11 @@ namespace Hw14.Repositories
             var card = _context.Cards.FirstOrDefault(x => x.CardNumber == cardNumber);
             if (card is null)
             {
-                return $"Cannot find card with number {cardNumber}.";
+                return $"Cannot Find CardNumber {cardNumber}.";
             }
             card.Password = newPass; 
             _context.SaveChanges();
-            return $"Password For  {card.User.FullName} Changed Successfully";
+            return $"Password Changed Successfully";
         }
 
         public Card GetCardByCardNumber(string cardNumber)

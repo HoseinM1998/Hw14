@@ -31,6 +31,7 @@ namespace Hw14.Repositories
         {
             return _context.Transactions
                 .Where(x => x.SourceCard.CardNumber == cardNumber || x.DestinationCard.CardNumber == cardNumber)
+                .OrderByDescending(x => x.TransactionDate)
                 .Select(x => new GetTransactionsDto
                 {
                     SourceCardNumber = x.SourceCard.CardNumber,
@@ -57,7 +58,6 @@ namespace Hw14.Repositories
                                       && x.TransactionDate == _context.Transactions.Max(t => t.TransactionDate)); 
             if (transaction == null)
             {
-                Console.WriteLine($"Transaction not found for card number {cardNumber}");
                 throw new InvalidOperationException("Transaction not found");
             }
             transaction.Fee = fee;

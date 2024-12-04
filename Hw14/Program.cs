@@ -11,6 +11,8 @@ using static Hw14.Repositories.TransactionRepository;
 
 ICardService cardService = new CardService();
 ITransactiionService transactionService = new TransactionService();
+IUserService userService = new UserService();
+
 bool loggedIn = false;
 string cardNumber = "";  
 
@@ -33,6 +35,7 @@ while (true)
             try
             {
                 bool loginResult = cardService.Login(cardNumber, password);
+                
                 if (!loginResult)
                 {
                     ColoredConsole.WriteLine("Invalid Password".DarkRed());
@@ -72,7 +75,8 @@ while (true)
                 ColoredConsole.WriteLine("1.View User Transactions".DarkBlue());
                 ColoredConsole.WriteLine("2.Fund Transfer".DarkBlue());
                 ColoredConsole.WriteLine("3.Show Balance".DarkBlue());
-                ColoredConsole.WriteLine("4.Exit".DarkRed());
+                ColoredConsole.WriteLine("4.Change Password".DarkBlue());
+                ColoredConsole.WriteLine("5.Exit".DarkRed());
 
 
                 string input = Console.ReadLine();
@@ -101,7 +105,7 @@ while (true)
 
                         ColoredConsole.WriteLine("Enter Recipient Card Number: ".DarkYellow());
                         string recipientCardNumber = Console.ReadLine();
-
+                        var sourceCardNumber= cardService.GetCardByCardNumber(cardNumber);
                         var recipientCard = cardService.GetCardByCardNumber(recipientCardNumber);
                         if (recipientCard != null)
                         {
@@ -119,20 +123,34 @@ while (true)
 
                             if (userInput == "1") 
                             {
-                                bool transferSuccess = transactionService.TransferFunds(cardNumber, recipientCardNumber, amount);
-                                var balance = cardService.GetCardBalance(cardNumber);
+                                userService.GenerateVerificationCode(sourceCardNumber.Id, sourceCardNumber.User.FullName);
+                                ColoredConsole.WriteLine("Enter Verification Code: ".DarkYellow());
+                                int enteredCode = int.Parse(Console.ReadLine());
 
-                                if (transferSuccess)
+                                bool isCodeValid = userService.ValidateVerificationCode(sourceCardNumber.Id,sourceCardNumber.User.FullName, enteredCode);
+
+                                if (isCodeValid)
                                 {
-                                    ColoredConsole.WriteLine("Transfer Successful".DarkGreen());
-                                    ColoredConsole.WriteLine($"New Balance {balance}$".DarkBlue());
+                                    bool transferSuccess = transactionService.TransferFunds(cardNumber, recipientCardNumber, amount);
+                                    var balance = cardService.GetCardBalance(cardNumber);
+
+                                    if (transferSuccess)
+                                    {
+                                        ColoredConsole.WriteLine("Transfer Successful".DarkGreen());
+                                        ColoredConsole.WriteLine($"New Balance {balance}$".DarkBlue());
+                                    }
+                                    else
+                                    {
+                                        ColoredConsole.WriteLine("Transfer Failed".DarkRed());
+                                    }
                                 }
                                 else
                                 {
-                                    ColoredConsole.WriteLine("Transfer Failed".DarkRed());
+                                    ColoredConsole.WriteLine("Invalid verification code".DarkRed());
                                 }
                             }
-                            else if (userInput == "2") 
+                          
+                        else if (userInput == "2") 
                             {
                                 ColoredConsole.WriteLine("Transfer Canceled".DarkRed());
                             }
@@ -161,6 +179,20 @@ while (true)
                         Console.ReadKey();
                         break;
                     case "4":
+                        ColoredConsole.WriteLine("Enter New Password".DarkBlue());
+                        string password = Console.ReadLine();
+                        bool isPasswordChanged = cardService.ChangePassword(cardNumber, password);
+                        if (isPasswordChanged)
+                        {
+                            ColoredConsole.WriteLine("Change Password Successful".DarkGreen());
+                        }
+                        else
+                        {
+                            ColoredConsole.WriteLine("Failed Password Is 4 Digits".DarkRed());
+                        }
+                        Console.ReadKey();
+                        break;
+                    case "5":
                       
                         inMenu = false;
                         ColoredConsole.WriteLine("Logged Out".DarkRed());

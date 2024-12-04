@@ -1,4 +1,6 @@
-﻿using Hw14.Contracts;
+﻿using Colors.Net.StringColorExtensions;
+using Colors.Net;
+using Hw14.Contracts;
 using Hw14.Entities;
 using Hw14.Repositories;
 using System;
@@ -20,9 +22,18 @@ namespace Hw14.Services
         public bool Login(string cardNumber, string password)
         {
             var tryCount = _cardRepository.GetWrongPasswordTry(cardNumber);
-
+            var card = _cardRepository.GetCard(cardNumber);
+            if (card == null)
+            {
+                throw new Exception("Card not found");
+            }
+            if (!card.IsActive)
+            {
+                throw new Exception("Account Blocked");
+            }
             if (tryCount > 3)
             {
+                _cardRepository.BlockCard(cardNumber);
                 return false;
             }
 
@@ -63,18 +74,19 @@ namespace Hw14.Services
             return true;
         }
 
-        public string ChangePassword(string cardNumber, string newPass)
+        public bool ChangePassword(string cardNumber, string newPass)
         {
-            if(newPass == null)
+            if (string.IsNullOrEmpty(newPass))
             {
-                return "Password Not Null";
+                 throw new Exception("Not Found");
             }
-            if(newPass.Length>4 && newPass.Length<4)
+
+            if (newPass.Length != 4)
             {
-                return "Password in == 4Digit";
+                throw new Exception("Password Must Exactly 4 Digits");
             }
-             _cardRepository.Changepassword(cardNumber, newPass);
-                return "Change password Successful";
+            _cardRepository.Changepassword(cardNumber, newPass);
+            return true;
         }
 
         public Card GetCardByCardNumber(string cardNumber)
@@ -82,8 +94,8 @@ namespace Hw14.Services
             var card = _cardRepository.GetCardByCardNumber(cardNumber);
             if (card == null)
             {
-                Console.WriteLine("Card not found!");
                 return null;
+                throw new Exception("Not Found");
             }
             return card;
         }
